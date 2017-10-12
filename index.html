@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+
+    <input text="Check it out Brad" />
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+    <script>
+      function initMap() {
+        var milton = {lat: 44.6380006, lng: -73.1212402};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: milton
+        });
+        var marker = new google.maps.Marker({
+          position: milton,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=REPLACE_ME&callback=initMap">
+    </script>
+  </body>
+</html>
